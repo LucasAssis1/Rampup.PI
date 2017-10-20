@@ -18,7 +18,7 @@ namespace Rampup.Atv4.UI
         {
             InitializeComponent();
         }
-        
+        //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
         public IList<Account> RegisteredAccounts = new List<Account>();
 
         private void btnSend_Click(object sender, EventArgs e)
@@ -26,8 +26,8 @@ namespace Rampup.Atv4.UI
             string name = txtUserName.Text;
             string agency = txtAgency.Text;
             string account_id = txtAccount.Text;
-            //comboBoxAccountType.Items.Add(PersonType.Fisica);
-            //comboBoxAccountType.Items.Add(PersonType.Juridica);
+            comboBoxAccountType.Items.Add(PersonType.Fisica);
+            comboBoxAccountType.Items.Add(PersonType.Juridica);
             var pType = PersonType.Fisica;
             var aType = AccountType.Corrente;
 

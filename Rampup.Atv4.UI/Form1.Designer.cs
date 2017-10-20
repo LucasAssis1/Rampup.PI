@@ -108,9 +108,6 @@ namespace Rampup.Atv4.UI
             // comboPersonType
             // 
             this.comboPersonType.FormattingEnabled = true;
-            this.comboPersonType.Items.AddRange(new object[] {
-            "Juridica",
-            "Fisica"});
             this.comboPersonType.Location = new System.Drawing.Point(16, 95);
             this.comboPersonType.Name = "comboPersonType";
             this.comboPersonType.Size = new System.Drawing.Size(118, 21);
@@ -119,9 +116,6 @@ namespace Rampup.Atv4.UI
             // comboBoxAccountType
             // 
             this.comboBoxAccountType.FormattingEnabled = true;
-            this.comboBoxAccountType.Items.AddRange(new object[] {
-            "Poupanca",
-            "Corrente"});
             this.comboBoxAccountType.Location = new System.Drawing.Point(17, 97);
             this.comboBoxAccountType.Name = "comboBoxAccountType";
             this.comboBoxAccountType.Size = new System.Drawing.Size(215, 21);
