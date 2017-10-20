@@ -1,0 +1,11 @@
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.UI.exe.config
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.UI.exe
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.UI.pdb
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Model.dll
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Model.pdb
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\obj\Debug\Rampup.Atv4.UI.csprojResolveAssemblyReference.cache
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\obj\Debug\Rampup.Atv4.UI.Form1.resources
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\obj\Debug\Rampup.Atv4.UI.csproj.GenerateResource.Cache
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\obj\Debug\Rampup.Atv4.UI.csproj.CoreCompileInputs.cache
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\obj\Debug\Rampup.Atv4.UI.exe
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.UI\obj\Debug\Rampup.Atv4.UI.pdb

@@ -1,0 +1,9 @@
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\bin\Debug\Rampup.Atv4.Construtor.exe.config
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\bin\Debug\Rampup.Atv4.Construtor.exe
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\bin\Debug\Rampup.Atv4.Construtor.pdb
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\bin\Debug\Rampup.Atv4.Model.dll
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\bin\Debug\Rampup.Atv4.Model.pdb
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\obj\Debug\Rampup.Atv4.Construtor.csprojResolveAssemblyReference.cache
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\obj\Debug\Rampup.Atv4.Construtor.csproj.CoreCompileInputs.cache
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\obj\Debug\Rampup.Atv4.Construtor.exe
+C:\dev\Rampup-PI\Aula-5\Rampup.Atv4.Construtor\Rampup.Atv4.Construtor\obj\Debug\Rampup.Atv4.Construtor.pdb
