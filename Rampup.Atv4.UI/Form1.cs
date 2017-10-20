@@ -26,7 +26,8 @@ namespace Rampup.Atv4.UI
             string name = txtUserName.Text;
             string agency = txtAgency.Text;
             string account_id = txtAccount.Text;
-            //var ptipo = Enum.GetValues(Enum.Get);
+            //comboBoxAccountType.Items.Add(PersonType.Fisica);
+            //comboBoxAccountType.Items.Add(PersonType.Juridica);
             var pType = PersonType.Fisica;
             var aType = AccountType.Corrente;
 
@@ -59,7 +60,7 @@ namespace Rampup.Atv4.UI
 
             MessageBox.Show("Dono :" + c1.Owner.Name + "\nTipo Pessoa: " + p1.PType + "\nTipo Conta: " + c1.Type_Ac + "\nCliente desde: " + c1.CreationDate.ToShortDateString() + "\nSaldo: " + c1.Balance);
             
-            string[] row = new string[]{ c1.Owner.Name.ToString(), c1.Type_Ac.ToString(), c1.Owner.PType.ToString(), c1.Balance.ToString() };
+            //string[] row = new string[]{ c1.Owner.Name.ToString(), c1.Type_Ac.ToString(), c1.Owner.PType.ToString(), c1.Balance.ToString() };
             //var item = new ListViewItem(row);
             var item = new ListViewItem(new[] { c1.Owner.Name.ToString(), c1.Type_Ac.ToString(), c1.Owner.PType.ToString(), c1.Balance.ToString() });
 
