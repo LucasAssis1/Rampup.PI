@@ -10,14 +10,14 @@ namespace Rampup.Atv4.Model
     public class Person
     {
         public Guid ID { get; private set; }
-        public String Nome { get; private set; }
-        public TipoPessoa Tipo { get; private set; }
+        public String Name { get; private set; }
+        public TipoPessoa PType { get; private set; }
 
-        public Person(string nome, TipoPessoa tipo)
+        public Person(string name, TipoPessoa pType)
         {
             this.ID = new Guid();
-            this.Nome = nome;
-            this.Tipo = tipo;
+            this.Name = name;
+            this.PType = pType;
         }
 
         ~Person(){

@@ -9,7 +9,9 @@ namespace Rampup.Atv4.Model
 {
     public class Account
     {
-        public Guid ID { get; private set; }
+        public string Account_ID { get; private set; }
+        public string Agency { get; private set; }
+
         public TipoConta Type_Ac { get; private set; }
         public Person Owner { get; private set; }
 
@@ -17,9 +19,10 @@ namespace Rampup.Atv4.Model
 
         public DateTime CreationDate { get; private set ; }
 
-        public Account(TipoConta type_Ac, Person owner)
+        public Account(string account_id, string agency, TipoConta type_Ac, Person owner)
         {
-            this.ID = new Guid();
+            this.Account_ID = account_id;
+            this.Agency = agency;
             this.Type_Ac = type_Ac;
             this.Owner = owner;
             this.CreationDate = DateTime.Now;
@@ -28,7 +31,10 @@ namespace Rampup.Atv4.Model
         {
             this.Balance += balance;
         }
+        ~Account()
+        {
 
+        }
 
     }
 }

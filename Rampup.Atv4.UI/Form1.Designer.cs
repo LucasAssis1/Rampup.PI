@@ -1,4 +1,6 @@
-﻿namespace Rampup.Atv4.UI
+﻿using System.Windows.Forms;
+
+namespace Rampup.Atv4.UI
 {
     partial class Form1
     {
@@ -39,12 +41,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageRegister = new System.Windows.Forms.TabPage();
-            this.tabPageOperations = new System.Windows.Forms.TabPage();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.labelAgency = new System.Windows.Forms.Label();
-            this.txtAgency = new System.Windows.Forms.TextBox();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.labelAccount = new System.Windows.Forms.Label();
+            this.txtAgency = new System.Windows.Forms.TextBox();
+            this.labelAgency = new System.Windows.Forms.Label();
+            this.tabPageOperations = new System.Windows.Forms.TabPage();
+            this.listViewAccounts = new System.Windows.Forms.ListView();
+            this.ownerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.accountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.personType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.balance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.tabPageRegister.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 121);
+            this.label2.Location = new System.Drawing.Point(27, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 3;
@@ -89,7 +95,7 @@
             this.comboPersonType.Items.AddRange(new object[] {
             "Juridica",
             "Fisica"});
-            this.comboPersonType.Location = new System.Drawing.Point(27, 140);
+            this.comboPersonType.Location = new System.Drawing.Point(27, 96);
             this.comboPersonType.Name = "comboPersonType";
             this.comboPersonType.Size = new System.Drawing.Size(215, 21);
             this.comboPersonType.TabIndex = 8;
@@ -164,6 +170,38 @@
             this.tabPageRegister.Text = "Cadastrar";
             this.tabPageRegister.UseVisualStyleBackColor = true;
             // 
+            // txtAccount
+            // 
+            this.txtAccount.Location = new System.Drawing.Point(126, 148);
+            this.txtAccount.Name = "txtAccount";
+            this.txtAccount.Size = new System.Drawing.Size(119, 20);
+            this.txtAccount.TabIndex = 16;
+            // 
+            // labelAccount
+            // 
+            this.labelAccount.AutoSize = true;
+            this.labelAccount.Location = new System.Drawing.Point(126, 132);
+            this.labelAccount.Name = "labelAccount";
+            this.labelAccount.Size = new System.Drawing.Size(35, 13);
+            this.labelAccount.TabIndex = 15;
+            this.labelAccount.Text = "Conta";
+            // 
+            // txtAgency
+            // 
+            this.txtAgency.Location = new System.Drawing.Point(27, 148);
+            this.txtAgency.Name = "txtAgency";
+            this.txtAgency.Size = new System.Drawing.Size(77, 20);
+            this.txtAgency.TabIndex = 14;
+            // 
+            // labelAgency
+            // 
+            this.labelAgency.AutoSize = true;
+            this.labelAgency.Location = new System.Drawing.Point(27, 132);
+            this.labelAgency.Name = "labelAgency";
+            this.labelAgency.Size = new System.Drawing.Size(46, 13);
+            this.labelAgency.TabIndex = 13;
+            this.labelAgency.Text = "Agência";
+            // 
             // tabPageOperations
             // 
             this.tabPageOperations.Location = new System.Drawing.Point(4, 22);
@@ -174,52 +212,46 @@
             this.tabPageOperations.Text = "Operações";
             this.tabPageOperations.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // listViewAccounts
             // 
-            this.listView1.Location = new System.Drawing.Point(47, 34);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(359, 466);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewAccounts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ownerName,
+            this.accountType,
+            this.personType,
+            this.balance});
+            this.listViewAccounts.Location = new System.Drawing.Point(47, 34);
+            this.listViewAccounts.Name = "listViewAccounts";
+            this.listViewAccounts.Size = new System.Drawing.Size(426, 466);
+            this.listViewAccounts.TabIndex = 14;
+            this.listViewAccounts.UseCompatibleStateImageBehavior = false;
+            this.listViewAccounts.View = System.Windows.Forms.View.Details;
             // 
-            // labelAgency
+            // ownerName
             // 
-            this.labelAgency.AutoSize = true;
-            this.labelAgency.Location = new System.Drawing.Point(27, 70);
-            this.labelAgency.Name = "labelAgency";
-            this.labelAgency.Size = new System.Drawing.Size(46, 13);
-            this.labelAgency.TabIndex = 13;
-            this.labelAgency.Text = "Agência";
+            this.ownerName.Text = "Nome";
+            this.ownerName.Width = 190;
             // 
-            // txtAgency
+            // accountType
             // 
-            this.txtAgency.Location = new System.Drawing.Point(27, 86);
-            this.txtAgency.Name = "txtAgency";
-            this.txtAgency.Size = new System.Drawing.Size(77, 20);
-            this.txtAgency.TabIndex = 14;
+            this.accountType.Text = "Tipo da conta";
+            this.accountType.Width = 85;
             // 
-            // txtAccount
+            // personType
             // 
-            this.txtAccount.Location = new System.Drawing.Point(126, 86);
-            this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(119, 20);
-            this.txtAccount.TabIndex = 16;
+            this.personType.Text = "Tipo de Pessoa";
+            this.personType.Width = 99;
             // 
-            // labelAccount
+            // balance
             // 
-            this.labelAccount.AutoSize = true;
-            this.labelAccount.Location = new System.Drawing.Point(126, 70);
-            this.labelAccount.Name = "labelAccount";
-            this.labelAccount.Size = new System.Drawing.Size(35, 13);
-            this.labelAccount.TabIndex = 15;
-            this.labelAccount.Text = "Conta";
+            this.balance.Text = "Saldo";
+            this.balance.Width = 46;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 535);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewAccounts);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -248,6 +280,10 @@
         private System.Windows.Forms.TextBox txtAgency;
         private System.Windows.Forms.Label labelAgency;
         private System.Windows.Forms.TabPage tabPageOperations;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewAccounts;
+        private System.Windows.Forms.ColumnHeader ownerName;
+        private System.Windows.Forms.ColumnHeader accountType;
+        private System.Windows.Forms.ColumnHeader personType;
+        private System.Windows.Forms.ColumnHeader balance;
     }
 }
