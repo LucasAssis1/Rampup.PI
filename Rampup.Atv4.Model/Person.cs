@@ -11,9 +11,9 @@ namespace Rampup.Atv4.Model
     {
         public Guid ID { get; private set; }
         public String Name { get; private set; }
-        public TipoPessoa PType { get; private set; }
+        public PersonType PType { get; private set; }
 
-        public Person(string name, TipoPessoa pType)
+        public Person(string name, PersonType pType)
         {
             this.ID = new Guid();
             this.Name = name;

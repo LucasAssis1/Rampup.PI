@@ -8,12 +8,12 @@ namespace Rampup.Atv4.Model
 {
     public class Commom
     {
-        public enum TipoConta
+        public enum AccountType
         {
             Corrente,
             Poupança,
         }
-        public enum TipoPessoa
+        public enum PersonType
         {
             Fisica,
             Juridica

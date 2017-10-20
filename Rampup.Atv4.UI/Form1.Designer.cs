@@ -41,31 +41,47 @@ namespace Rampup.Atv4.UI
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPageRegister = new System.Windows.Forms.TabPage();
+            this.groupBoxAccount_Register = new System.Windows.Forms.GroupBox();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.labelAccount = new System.Windows.Forms.Label();
             this.txtAgency = new System.Windows.Forms.TextBox();
             this.labelAgency = new System.Windows.Forms.Label();
+            this.groupBoxUser_Register = new System.Windows.Forms.GroupBox();
             this.tabPageOperations = new System.Windows.Forms.TabPage();
+            this.txtAccount_Operations = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtAgency_Operations = new System.Windows.Forms.TextBox();
+            this.labelAgency_Operations = new System.Windows.Forms.Label();
             this.listViewAccounts = new System.Windows.Forms.ListView();
             this.ownerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.accountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.personType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.balance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox_Operations = new System.Windows.Forms.GroupBox();
+            this.radioButtonCashOut_Operations = new System.Windows.Forms.RadioButton();
+            this.radioButtonDeposit_Operations = new System.Windows.Forms.RadioButton();
+            this.labelValue_Operations = new System.Windows.Forms.Label();
+            this.txtValue_Operations = new System.Windows.Forms.TextBox();
+            this.btnConfirm_Operations = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPageRegister.SuspendLayout();
+            this.groupBoxAccount_Register.SuspendLayout();
+            this.groupBoxUser_Register.SuspendLayout();
+            this.tabPageOperations.SuspendLayout();
+            this.groupBox_Operations.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(27, 37);
+            this.txtUserName.Location = new System.Drawing.Point(16, 42);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(218, 20);
+            this.txtUserName.Size = new System.Drawing.Size(216, 20);
             this.txtUserName.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 18);
+            this.label1.Location = new System.Drawing.Point(16, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 2;
@@ -74,7 +90,7 @@ namespace Rampup.Atv4.UI
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 77);
+            this.label2.Location = new System.Drawing.Point(16, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 3;
@@ -83,7 +99,7 @@ namespace Rampup.Atv4.UI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 180);
+            this.label3.Location = new System.Drawing.Point(17, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 7;
@@ -95,10 +111,10 @@ namespace Rampup.Atv4.UI
             this.comboPersonType.Items.AddRange(new object[] {
             "Juridica",
             "Fisica"});
-            this.comboPersonType.Location = new System.Drawing.Point(27, 96);
+            this.comboPersonType.Location = new System.Drawing.Point(16, 95);
             this.comboPersonType.Name = "comboPersonType";
-            this.comboPersonType.Size = new System.Drawing.Size(215, 21);
-            this.comboPersonType.TabIndex = 8;
+            this.comboPersonType.Size = new System.Drawing.Size(118, 21);
+            this.comboPersonType.TabIndex = 1;
             // 
             // comboBoxAccountType
             // 
@@ -106,14 +122,14 @@ namespace Rampup.Atv4.UI
             this.comboBoxAccountType.Items.AddRange(new object[] {
             "Poupanca",
             "Corrente"});
-            this.comboBoxAccountType.Location = new System.Drawing.Point(27, 199);
+            this.comboBoxAccountType.Location = new System.Drawing.Point(17, 97);
             this.comboBoxAccountType.Name = "comboBoxAccountType";
             this.comboBoxAccountType.Size = new System.Drawing.Size(215, 21);
-            this.comboBoxAccountType.TabIndex = 9;
+            this.comboBoxAccountType.TabIndex = 4;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(143, 375);
+            this.btnSend.Location = new System.Drawing.Point(144, 398);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(118, 45);
             this.btnSend.TabIndex = 10;
@@ -123,15 +139,15 @@ namespace Rampup.Atv4.UI
             // 
             // txtBalance
             // 
-            this.txtBalance.Location = new System.Drawing.Point(27, 255);
+            this.txtBalance.Location = new System.Drawing.Point(17, 150);
             this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(218, 20);
-            this.txtBalance.TabIndex = 11;
+            this.txtBalance.Size = new System.Drawing.Size(215, 20);
+            this.txtBalance.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(27, 239);
+            this.label4.Location = new System.Drawing.Point(17, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 12;
@@ -149,19 +165,9 @@ namespace Rampup.Atv4.UI
             // 
             // tabPageRegister
             // 
-            this.tabPageRegister.Controls.Add(this.txtAccount);
-            this.tabPageRegister.Controls.Add(this.labelAccount);
-            this.tabPageRegister.Controls.Add(this.txtAgency);
-            this.tabPageRegister.Controls.Add(this.labelAgency);
-            this.tabPageRegister.Controls.Add(this.txtBalance);
+            this.tabPageRegister.Controls.Add(this.groupBoxAccount_Register);
+            this.tabPageRegister.Controls.Add(this.groupBoxUser_Register);
             this.tabPageRegister.Controls.Add(this.btnSend);
-            this.tabPageRegister.Controls.Add(this.label4);
-            this.tabPageRegister.Controls.Add(this.txtUserName);
-            this.tabPageRegister.Controls.Add(this.label1);
-            this.tabPageRegister.Controls.Add(this.label2);
-            this.tabPageRegister.Controls.Add(this.comboBoxAccountType);
-            this.tabPageRegister.Controls.Add(this.label3);
-            this.tabPageRegister.Controls.Add(this.comboPersonType);
             this.tabPageRegister.Location = new System.Drawing.Point(4, 22);
             this.tabPageRegister.Name = "tabPageRegister";
             this.tabPageRegister.Padding = new System.Windows.Forms.Padding(3);
@@ -170,17 +176,34 @@ namespace Rampup.Atv4.UI
             this.tabPageRegister.Text = "Cadastrar";
             this.tabPageRegister.UseVisualStyleBackColor = true;
             // 
+            // groupBoxAccount_Register
+            // 
+            this.groupBoxAccount_Register.Controls.Add(this.txtBalance);
+            this.groupBoxAccount_Register.Controls.Add(this.txtAccount);
+            this.groupBoxAccount_Register.Controls.Add(this.label3);
+            this.groupBoxAccount_Register.Controls.Add(this.labelAccount);
+            this.groupBoxAccount_Register.Controls.Add(this.comboBoxAccountType);
+            this.groupBoxAccount_Register.Controls.Add(this.txtAgency);
+            this.groupBoxAccount_Register.Controls.Add(this.label4);
+            this.groupBoxAccount_Register.Controls.Add(this.labelAgency);
+            this.groupBoxAccount_Register.Location = new System.Drawing.Point(30, 176);
+            this.groupBoxAccount_Register.Name = "groupBoxAccount_Register";
+            this.groupBoxAccount_Register.Size = new System.Drawing.Size(313, 193);
+            this.groupBoxAccount_Register.TabIndex = 15;
+            this.groupBoxAccount_Register.TabStop = false;
+            this.groupBoxAccount_Register.Text = "Conta";
+            // 
             // txtAccount
             // 
-            this.txtAccount.Location = new System.Drawing.Point(126, 148);
+            this.txtAccount.Location = new System.Drawing.Point(116, 43);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(119, 20);
-            this.txtAccount.TabIndex = 16;
+            this.txtAccount.Size = new System.Drawing.Size(116, 20);
+            this.txtAccount.TabIndex = 3;
             // 
             // labelAccount
             // 
             this.labelAccount.AutoSize = true;
-            this.labelAccount.Location = new System.Drawing.Point(126, 132);
+            this.labelAccount.Location = new System.Drawing.Point(116, 27);
             this.labelAccount.Name = "labelAccount";
             this.labelAccount.Size = new System.Drawing.Size(35, 13);
             this.labelAccount.TabIndex = 15;
@@ -188,22 +211,37 @@ namespace Rampup.Atv4.UI
             // 
             // txtAgency
             // 
-            this.txtAgency.Location = new System.Drawing.Point(27, 148);
+            this.txtAgency.Location = new System.Drawing.Point(17, 43);
             this.txtAgency.Name = "txtAgency";
             this.txtAgency.Size = new System.Drawing.Size(77, 20);
-            this.txtAgency.TabIndex = 14;
+            this.txtAgency.TabIndex = 2;
             // 
             // labelAgency
             // 
             this.labelAgency.AutoSize = true;
-            this.labelAgency.Location = new System.Drawing.Point(27, 132);
+            this.labelAgency.Location = new System.Drawing.Point(17, 27);
             this.labelAgency.Name = "labelAgency";
             this.labelAgency.Size = new System.Drawing.Size(46, 13);
             this.labelAgency.TabIndex = 13;
             this.labelAgency.Text = "Agência";
             // 
+            // groupBoxUser_Register
+            // 
+            this.groupBoxUser_Register.Controls.Add(this.txtUserName);
+            this.groupBoxUser_Register.Controls.Add(this.comboPersonType);
+            this.groupBoxUser_Register.Controls.Add(this.label2);
+            this.groupBoxUser_Register.Controls.Add(this.label1);
+            this.groupBoxUser_Register.Location = new System.Drawing.Point(30, 25);
+            this.groupBoxUser_Register.Name = "groupBoxUser_Register";
+            this.groupBoxUser_Register.Size = new System.Drawing.Size(313, 135);
+            this.groupBoxUser_Register.TabIndex = 16;
+            this.groupBoxUser_Register.TabStop = false;
+            this.groupBoxUser_Register.Text = "Usuário";
+            // 
             // tabPageOperations
             // 
+            this.tabPageOperations.Controls.Add(this.btnConfirm_Operations);
+            this.tabPageOperations.Controls.Add(this.groupBox_Operations);
             this.tabPageOperations.Location = new System.Drawing.Point(4, 22);
             this.tabPageOperations.Name = "tabPageOperations";
             this.tabPageOperations.Padding = new System.Windows.Forms.Padding(3);
@@ -211,6 +249,38 @@ namespace Rampup.Atv4.UI
             this.tabPageOperations.TabIndex = 1;
             this.tabPageOperations.Text = "Operações";
             this.tabPageOperations.UseVisualStyleBackColor = true;
+            // 
+            // txtAccount_Operations
+            // 
+            this.txtAccount_Operations.Location = new System.Drawing.Point(90, 39);
+            this.txtAccount_Operations.Name = "txtAccount_Operations";
+            this.txtAccount_Operations.Size = new System.Drawing.Size(82, 20);
+            this.txtAccount_Operations.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(90, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Conta";
+            // 
+            // txtAgency_Operations
+            // 
+            this.txtAgency_Operations.Location = new System.Drawing.Point(17, 39);
+            this.txtAgency_Operations.Name = "txtAgency_Operations";
+            this.txtAgency_Operations.Size = new System.Drawing.Size(46, 20);
+            this.txtAgency_Operations.TabIndex = 1;
+            // 
+            // labelAgency_Operations
+            // 
+            this.labelAgency_Operations.AutoSize = true;
+            this.labelAgency_Operations.Location = new System.Drawing.Point(17, 23);
+            this.labelAgency_Operations.Name = "labelAgency_Operations";
+            this.labelAgency_Operations.Size = new System.Drawing.Size(46, 13);
+            this.labelAgency_Operations.TabIndex = 0;
+            this.labelAgency_Operations.Text = "Agência";
             // 
             // listViewAccounts
             // 
@@ -246,6 +316,71 @@ namespace Rampup.Atv4.UI
             this.balance.Text = "Saldo";
             this.balance.Width = 46;
             // 
+            // groupBox_Operations
+            // 
+            this.groupBox_Operations.Controls.Add(this.labelValue_Operations);
+            this.groupBox_Operations.Controls.Add(this.txtValue_Operations);
+            this.groupBox_Operations.Controls.Add(this.radioButtonDeposit_Operations);
+            this.groupBox_Operations.Controls.Add(this.radioButtonCashOut_Operations);
+            this.groupBox_Operations.Controls.Add(this.txtAccount_Operations);
+            this.groupBox_Operations.Controls.Add(this.labelAgency_Operations);
+            this.groupBox_Operations.Controls.Add(this.txtAgency_Operations);
+            this.groupBox_Operations.Controls.Add(this.label5);
+            this.groupBox_Operations.Location = new System.Drawing.Point(30, 25);
+            this.groupBox_Operations.Name = "groupBox_Operations";
+            this.groupBox_Operations.Size = new System.Drawing.Size(313, 179);
+            this.groupBox_Operations.TabIndex = 5;
+            this.groupBox_Operations.TabStop = false;
+            this.groupBox_Operations.Text = "Operação";
+            // 
+            // radioButtonCashOut_Operations
+            // 
+            this.radioButtonCashOut_Operations.AutoSize = true;
+            this.radioButtonCashOut_Operations.Location = new System.Drawing.Point(17, 139);
+            this.radioButtonCashOut_Operations.Name = "radioButtonCashOut_Operations";
+            this.radioButtonCashOut_Operations.Size = new System.Drawing.Size(53, 17);
+            this.radioButtonCashOut_Operations.TabIndex = 5;
+            this.radioButtonCashOut_Operations.TabStop = true;
+            this.radioButtonCashOut_Operations.Text = "Sacar";
+            this.radioButtonCashOut_Operations.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDeposit_Operations
+            // 
+            this.radioButtonDeposit_Operations.AutoSize = true;
+            this.radioButtonDeposit_Operations.Location = new System.Drawing.Point(84, 139);
+            this.radioButtonDeposit_Operations.Name = "radioButtonDeposit_Operations";
+            this.radioButtonDeposit_Operations.Size = new System.Drawing.Size(70, 17);
+            this.radioButtonDeposit_Operations.TabIndex = 6;
+            this.radioButtonDeposit_Operations.TabStop = true;
+            this.radioButtonDeposit_Operations.Text = "Depositar";
+            this.radioButtonDeposit_Operations.UseVisualStyleBackColor = true;
+            // 
+            // labelValue_Operations
+            // 
+            this.labelValue_Operations.AutoSize = true;
+            this.labelValue_Operations.Location = new System.Drawing.Point(17, 79);
+            this.labelValue_Operations.Name = "labelValue_Operations";
+            this.labelValue_Operations.Size = new System.Drawing.Size(31, 13);
+            this.labelValue_Operations.TabIndex = 7;
+            this.labelValue_Operations.Text = "Valor";
+            // 
+            // txtValue_Operations
+            // 
+            this.txtValue_Operations.Location = new System.Drawing.Point(17, 95);
+            this.txtValue_Operations.Name = "txtValue_Operations";
+            this.txtValue_Operations.Size = new System.Drawing.Size(108, 20);
+            this.txtValue_Operations.TabIndex = 8;
+            // 
+            // btnConfirm_Operations
+            // 
+            this.btnConfirm_Operations.Location = new System.Drawing.Point(207, 223);
+            this.btnConfirm_Operations.Name = "btnConfirm_Operations";
+            this.btnConfirm_Operations.Size = new System.Drawing.Size(127, 42);
+            this.btnConfirm_Operations.TabIndex = 6;
+            this.btnConfirm_Operations.Text = "Confirmar";
+            this.btnConfirm_Operations.UseVisualStyleBackColor = true;
+            this.btnConfirm_Operations.Click += new System.EventHandler(this.btnConfirm_Operations_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,7 +392,13 @@ namespace Rampup.Atv4.UI
             this.Text = "Form1";
             this.tabControl.ResumeLayout(false);
             this.tabPageRegister.ResumeLayout(false);
-            this.tabPageRegister.PerformLayout();
+            this.groupBoxAccount_Register.ResumeLayout(false);
+            this.groupBoxAccount_Register.PerformLayout();
+            this.groupBoxUser_Register.ResumeLayout(false);
+            this.groupBoxUser_Register.PerformLayout();
+            this.tabPageOperations.ResumeLayout(false);
+            this.groupBox_Operations.ResumeLayout(false);
+            this.groupBox_Operations.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -285,5 +426,17 @@ namespace Rampup.Atv4.UI
         private System.Windows.Forms.ColumnHeader accountType;
         private System.Windows.Forms.ColumnHeader personType;
         private System.Windows.Forms.ColumnHeader balance;
+        private TextBox txtAccount_Operations;
+        private Label label5;
+        private TextBox txtAgency_Operations;
+        private Label labelAgency_Operations;
+        private GroupBox groupBoxUser_Register;
+        private GroupBox groupBoxAccount_Register;
+        private GroupBox groupBox_Operations;
+        private RadioButton radioButtonDeposit_Operations;
+        private RadioButton radioButtonCashOut_Operations;
+        private Label labelValue_Operations;
+        private TextBox txtValue_Operations;
+        private Button btnConfirm_Operations;
     }
 }

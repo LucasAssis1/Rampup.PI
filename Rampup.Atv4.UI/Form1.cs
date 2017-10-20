@@ -27,17 +27,17 @@ namespace Rampup.Atv4.UI
             string agency = txtAgency.Text;
             string account_id = txtAccount.Text;
             //var ptipo = Enum.GetValues(Enum.Get);
-            var pType = TipoPessoa.Fisica;
-            var aType = TipoConta.Corrente;
+            var pType = PersonType.Fisica;
+            var aType = AccountType.Corrente;
 
             if (comboPersonType.Text == "Fisica")
-                pType = TipoPessoa.Fisica;
+                pType = PersonType.Fisica;
             else
-                pType = TipoPessoa.Juridica;
+                pType = PersonType.Juridica;
             if (comboBoxAccountType.Text == "Poupanca")
-                aType = TipoConta.Poupança;
+                aType = AccountType.Poupança;
             else
-                aType = TipoConta.Corrente;
+                aType = AccountType.Corrente;
             double saldo = Convert.ToDouble(txtBalance.Text);
 
             Person p1 = new Person(name, pType);
@@ -66,6 +66,19 @@ namespace Rampup.Atv4.UI
             listViewAccounts.Items.Add(item);
 
             
+        }
+
+        private void btnConfirm_Operations_Click(object sender, EventArgs e)
+        {
+            string agency = txtAgency_Operations.Text;
+            string account = txtAccount_Operations.Text;
+            double value = Convert.ToDouble(txtValue_Operations.Text);
+
+            if (!radioButtonCashOut_Operations.Checked ^ !radioButtonDeposit_Operations.Checked)
+            {
+                
+            }
+
         }
     }
 }
