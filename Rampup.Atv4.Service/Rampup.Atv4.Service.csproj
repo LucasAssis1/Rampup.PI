@@ -1,7 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netstandard1.4</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rampup.Atv4.Model\Rampup.Atv4.Model.csproj" />
+    <ProjectReference Include="..\Rampup.Atv4.Repository\Rampup.Atv4.Repository.csproj" />
+  </ItemGroup>
 
 </Project>

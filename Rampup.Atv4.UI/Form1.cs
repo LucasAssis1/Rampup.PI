@@ -1,4 +1,5 @@
 ﻿using Rampup.Atv4.Model;
+//using Rampup.Atv4.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,8 +20,8 @@ namespace Rampup.Atv4.UI
             InitializeComponent();
         }
         //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
-        public IList<Account> RegisteredAccounts = new List<Account>();
-
+        public List<Account> RegisteredAccounts = new List<Account>();
+//        AccountService _service = new AccountService();
         private void btnSend_Click(object sender, EventArgs e)
         {
             string name = txtUserName.Text;
@@ -47,9 +48,8 @@ namespace Rampup.Atv4.UI
             c1.CalcSaldo(saldo);
 
             RegisteredAccounts.Add(c1);
-
-            c1 = RegisteredAccounts.Last();
-
+            //_service.AddAccount(c1);
+            
             txtUserName.Clear();
             txtAccount.Clear();
             txtAgency.Clear();

@@ -1,8 +1,0 @@
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\bin\Debug\netcoreapp1.1\Rampup.Atv4.Service.deps.json
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\bin\Debug\netcoreapp1.1\Rampup.Atv4.Service.dll
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\bin\Debug\netcoreapp1.1\Rampup.Atv4.Service.pdb
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netcoreapp1.1\Rampup.Atv4.Service.csprojResolveAssemblyReference.cache
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netcoreapp1.1\Rampup.Atv4.Service.csproj.CoreCompileInputs.cache
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netcoreapp1.1\Rampup.Atv4.Service.AssemblyInfo.cs
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netcoreapp1.1\Rampup.Atv4.Service.dll
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netcoreapp1.1\Rampup.Atv4.Service.pdb
