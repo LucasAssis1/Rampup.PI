@@ -70,6 +70,13 @@
       <Project>{027deb4e-9593-4618-bdca-4da74eac8590}</Project>
       <Name>Rampup.Atv4.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Rampup.Atv4.Service\Rampup.Atv4.Service.csproj">
+      <Project>{ba5c1298-1e72-4ac0-8e68-148bcbdd4942}</Project>
+      <Name>Rampup.Atv4.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

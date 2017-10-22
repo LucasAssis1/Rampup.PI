@@ -1,5 +1,5 @@
 ﻿using Rampup.Atv4.Model;
-//using Rampup.Atv4.Service;
+using Rampup.Atv4.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,25 +18,27 @@ namespace Rampup.Atv4.UI
         public Form1()
         {
             InitializeComponent();
+            //comboBoxAccountType.Items.Add(PersonType.Fisica.ToString());
+            //comboBoxAccountType.Items.Add(PersonType.Juridica.ToString());
         }
+
         //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
-        public List<Account> RegisteredAccounts = new List<Account>();
-//        AccountService _service = new AccountService();
+        //public List<Account> RegisteredAccounts = new List<Account>();
+        AccountService _service = new AccountService();
         private void btnSend_Click(object sender, EventArgs e)
         {
             string name = txtUserName.Text;
             string agency = txtAgency.Text;
             string account_id = txtAccount.Text;
-            comboBoxAccountType.Items.Add(PersonType.Fisica);
-            comboBoxAccountType.Items.Add(PersonType.Juridica);
+            
             var pType = PersonType.Fisica;
             var aType = AccountType.Corrente;
 
-            if (comboPersonType.Text == "Fisica")
+            if (comboPersonType.Text == "Física")
                 pType = PersonType.Fisica;
             else
                 pType = PersonType.Juridica;
-            if (comboBoxAccountType.Text == "Poupanca")
+            if (comboBoxAccountType.Text == "Poupança")
                 aType = AccountType.Poupança;
             else
                 aType = AccountType.Corrente;
@@ -47,8 +49,8 @@ namespace Rampup.Atv4.UI
 
             c1.CalcSaldo(saldo);
 
-            RegisteredAccounts.Add(c1);
-            //_service.AddAccount(c1);
+            //RegisteredAccounts.Add(c1);
+            _service.AddAccount(c1);
             
             txtUserName.Clear();
             txtAccount.Clear();
