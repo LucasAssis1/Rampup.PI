@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.Model", "Rampup
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.UI", "Rampup.Atv4.UI\Rampup.Atv4.UI.csproj", "{FB2FD578-8F7B-442F-89C0-99480CB260C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.Service", "Rampup.Atv4.Service\Rampup.Atv4.Service.csproj", "{CC4BE5CF-B85D-4F10-B9D8-0F085D432638}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FB2FD578-8F7B-442F-89C0-99480CB260C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB2FD578-8F7B-442F-89C0-99480CB260C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB2FD578-8F7B-442F-89C0-99480CB260C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4BE5CF-B85D-4F10-B9D8-0F085D432638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4BE5CF-B85D-4F10-B9D8-0F085D432638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4BE5CF-B85D-4F10-B9D8-0F085D432638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4BE5CF-B85D-4F10-B9D8-0F085D432638}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
