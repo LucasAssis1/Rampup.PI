@@ -18,8 +18,6 @@ namespace Rampup.Atv4.UI
         public Form1()
         {
             InitializeComponent();
-            //comboBoxAccountType.Items.Add(PersonType.Fisica.ToString());
-            //comboBoxAccountType.Items.Add(PersonType.Juridica.ToString());
         }
 
         //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
@@ -48,8 +46,7 @@ namespace Rampup.Atv4.UI
             Account c1 = new Account(account_id, agency, aType, p1);
            
             c1.CalcSaldo(saldo);
-
-            //RegisteredAccounts.Add(c1);
+            
             bool check =_service.AddAccount(c1);
             List<Account> list = _service.ListAccounts();
             
@@ -61,31 +58,11 @@ namespace Rampup.Atv4.UI
             comboPersonType.ResetText();
             comboBoxAccountType.ResetText();
 
-            //MessageBox.Show("Dono :" + c1.Owner.Name + "\nTipo Pessoa: " + p1.PType + "\nTipo Conta: " + c1.Type_Ac + "\nCliente desde: " + c1.CreationDate.ToShortDateString() + "\nSaldo: " + c1.Balance);
-
-            //string[] row = new string[]{ c1.Owner.Name.ToString(), c1.Type_Ac.ToString(), c1.Owner.PType.ToString(), c1.Balance.ToString() };
-            //var item = new ListViewItem(row);
-
-            //IDictionary<String, Object> dictAccount = new Dictionary<String, Object>();
-            //for(int i = 0; i< list.Count; i++)
-            //{
-            //    dictAccount.Add("Nome", list[i].Owner.Name);
-            //    dictAccount.Add("Agência", list[i].Agency);
-            //    dictAccount.Add("Conta", list[i].Account_ID);
-            //    dictAccount.Add("Saldo", list[i].Balance);
-            //}
-
             dataGridAccounts.DataSource = null;
             dataGridAccounts.DataSource = _service.ListAccounts();
-            
-            //dataGridAccounts.Columns.Add("Dg_Name", "Nome");
-            
 
             var item = new ListViewItem(new[] { c1.Owner.Name.ToString(), c1.Type_Ac.ToString(), c1.Owner.PType.ToString(), c1.Balance.ToString() });
-
-            //listViewAccounts.Items.Add(item);
-
-            
+    
         }
 
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
