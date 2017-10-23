@@ -45,7 +45,7 @@ namespace Rampup.Atv4.UI
             double saldo = Convert.ToDouble(txtBalance.Text);
 
             Person p1 = new Person(name, pType);
-            Account c1 = new Account(agency, account_id ,aType, p1);
+            Account c1 = new Account(account_id, agency, aType, p1);
            
             c1.CalcSaldo(saldo);
 
@@ -102,6 +102,15 @@ namespace Rampup.Atv4.UI
             {
                 _service.UpdateAccount(agency, account, value);
             }
+
+            dataGridAccounts.DataSource = null;
+            dataGridAccounts.DataSource = _service.ListAccounts();
+
+            txtAgency_Operations.Clear();
+            txtAccount_Operations.Clear();
+            txtValue_Operations.Clear();
+            radioButtonCashOut_Operations.Checked = false;
+            radioButtonDeposit_Operations.Checked = false;
         }
     }
 }
