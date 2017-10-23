@@ -13,14 +13,14 @@ namespace Rampup.Atv4.Repository
             return accounts;
         }
 
-        public bool AddAccount(Account account)
+        public int AddAccount(Account account)
         {
             int accountNumber = accounts.Count;
             accounts.Add(account);
 
             if (accounts.Count > accountNumber)
-                return true;
-            return false;
+                return 1;
+            return -1;
         }
 
         public bool UpdateAccount(string agency, string account_ID, double value)

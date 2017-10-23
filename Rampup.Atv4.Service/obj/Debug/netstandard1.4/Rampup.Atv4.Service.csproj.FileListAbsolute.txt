@@ -23,3 +23,15 @@ C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\De
 C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.AssemblyInfo.cs
 C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.dll
 C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.pdb
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Service.deps.json
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.csprojResolveAssemblyReference.cache
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.csproj.CoreCompileInputs.cache
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.AssemblyInfo.cs
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\obj\Debug\netstandard1.4\Rampup.Atv4.Service.pdb
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Service.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Service.pdb
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Model.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Model.pdb
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.pdb
