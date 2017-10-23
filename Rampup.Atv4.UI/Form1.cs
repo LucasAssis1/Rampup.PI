@@ -20,9 +20,10 @@ namespace Rampup.Atv4.UI
         {
             InitializeComponent();
             _service = new AccountService();
-            dataGridAccounts.Hide();
+            cbbAccountType.DataSource = Enum.GetValues(typeof(AccountType));
+            cbbPersonType.DataSource = Enum.GetValues(typeof(PersonType));
         }
-        
+
         //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
         //public List<Account> RegisteredAccounts = new List<Account>();
         private void btnSend_Click(object sender, EventArgs e)
@@ -30,47 +31,47 @@ namespace Rampup.Atv4.UI
             string name = txtUserName.Text;
             string agency = txtAgency.Text;
             string account_id = txtAccount.Text;
+
+            string pType = cbbPersonType.Text;
+            string aType = cbbAccountType.Text;
             
-            var pType = PersonType.Fisica;
-            var aType = AccountType.Corrente;
-
-            if (comboPersonType.Text == "Física")
-                pType = PersonType.Fisica;
-            else
-                pType = PersonType.Juridica;
-            if (comboBoxAccountType.Text == "Poupança")
-                aType = AccountType.Poupança;
-            else
-                aType = AccountType.Corrente;
-            double saldo = Convert.ToDouble(txtBalance.Text);
-
-            Person p1 = new Person(name, pType);
-            Account c1 = new Account(account_id, agency, aType, p1);
-           
-            c1.CalcSaldo(saldo);
-            
-            bool check =_service.AddAccount(c1);
-            List<Account> list = _service.ListAccounts();
-            
-            txtUserName.Clear();
-            txtAccount.Clear();
-            txtAgency.Clear();
-            txtAccount.Clear();
-            txtBalance.Clear();
-            comboPersonType.ResetText();
-            comboBoxAccountType.ResetText();
-
-            dataGridAccounts.DataSource = null;
-            dataGridAccounts.DataSource = list;
-
-            listViewAccounts.Items.Clear();
-
-            foreach (var i in list)
+            if (!String.IsNullOrEmpty(name) && !String.IsNullOrEmpty(agency) && !String.IsNullOrEmpty(account_id) && txtBalance.Text != null)
             {
-                var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
-                listViewAccounts.Items.Add(item);
-            }
+                double balance = Convert.ToDouble(txtBalance.Text);
+                Person p1 = new Person(name, pType);
+                Account c1 = new Account(account_id, agency, aType, p1);
 
+                c1.CalcSaldo(balance);
+
+                bool check = _service.AddAccount(c1);
+                List<Account> list = _service.ListAccounts();
+
+                txtUserName.Clear();
+                txtAccount.Clear();
+                txtAgency.Clear();
+                txtAccount.Clear();
+                txtBalance.Clear();
+                cbbPersonType.ResetText();
+                cbbAccountType.ResetText();
+                
+                listViewAccounts.Items.Clear();
+
+                for(int i = 0; i < list.Count(); i++)
+                {
+                    var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Account_ID.ToString(),list[i].Agency.ToString() ,list[i].Type_Ac.ToString(), list[i].Owner.PType.ToString(), list[i].Balance.ToString() });
+                    listViewAccounts.Items.Add(item);
+                }
+
+                //foreach (var i in list)
+                //{
+                //    var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
+                //    listViewAccounts.Items.Add(item);
+                //}
+            }
+            else
+            {
+                MessageBox.Show("Preencha todos os campos!");
+            }
         }
 
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
@@ -78,19 +79,16 @@ namespace Rampup.Atv4.UI
             string agency = txtAgency_Operations.Text;
             string account = txtAccount_Operations.Text;
             double value = Convert.ToDouble(txtValue_Operations.Text);
-
+            bool check;
             if (radioButtonCashOut_Operations.Checked)
             {
-                _service.UpdateAccount(agency, account, -value);
+                check = _service.UpdateAccount(agency, account, -value);
             }
             else if (radioButtonDeposit_Operations.Checked)
             {
-                _service.UpdateAccount(agency, account, value);
-            }
-
-            dataGridAccounts.DataSource = null;
-            dataGridAccounts.DataSource = _service.ListAccounts();
-
+               check = _service.UpdateAccount(agency, account, value);
+            }        
+            
             txtAgency_Operations.Clear();
             txtAccount_Operations.Clear();
             txtValue_Operations.Clear();
@@ -98,11 +96,11 @@ namespace Rampup.Atv4.UI
             radioButtonDeposit_Operations.Checked = false;
             listViewAccounts.Items.Clear();
 
-
+            //string[] showList = new string[]
             List<Account> list = _service.ListAccounts();
             foreach (var i in list)
             {
-                var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
+                var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Agency.ToString(), i.Account_ID.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
                 listViewAccounts.Items.Add(item);
             }
         }

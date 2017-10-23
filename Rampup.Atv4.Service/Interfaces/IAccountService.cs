@@ -9,7 +9,7 @@ namespace Rampup.Atv4.Service.Interfaces
     {
         List<Account> ListAccounts();
         bool AddAccount(Account account);
-        void UpdateAccount(string agency, string account_ID, double value);
+        bool UpdateAccount(string agency, string account_ID, double value);
         void DeleteAccount(string agency, string account_ID);
     }
 }

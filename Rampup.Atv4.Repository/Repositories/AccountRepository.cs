@@ -23,7 +23,7 @@ namespace Rampup.Atv4.Repository
             return false;
         }
 
-        public void UpdateAccount(string agency, string account_ID, double value)
+        public bool UpdateAccount(string agency, string account_ID, double value)
         {
 
             foreach (var item in accounts)
@@ -31,8 +31,10 @@ namespace Rampup.Atv4.Repository
                 if (agency == item.Agency && account_ID == item.Account_ID)
                 {
                     item.CalcSaldo(value);
+                    return true;
                 }
             }
+            return false;
         }
 
         public void DeleteAccount(string agency, string account_ID)

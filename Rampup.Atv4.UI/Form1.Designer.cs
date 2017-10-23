@@ -34,8 +34,8 @@ namespace Rampup.Atv4.UI
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboPersonType = new System.Windows.Forms.ComboBox();
-            this.comboBoxAccountType = new System.Windows.Forms.ComboBox();
+            this.cbbPersonType = new System.Windows.Forms.ComboBox();
+            this.cbbAccountType = new System.Windows.Forms.ComboBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.txtBalance = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,17 +60,17 @@ namespace Rampup.Atv4.UI
             this.label5 = new System.Windows.Forms.Label();
             this.listViewAccounts = new System.Windows.Forms.ListView();
             this.ownerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.account_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.agency = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.accountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.personType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.balance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.dataGridAccounts = new System.Windows.Forms.DataGridView();
             this.tabControl.SuspendLayout();
             this.tabPageRegister.SuspendLayout();
             this.groupBoxAccount_Register.SuspendLayout();
             this.groupBoxUser_Register.SuspendLayout();
             this.tabPageOperations.SuspendLayout();
             this.groupBox_Operations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAccounts)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -107,27 +107,27 @@ namespace Rampup.Atv4.UI
             this.label3.TabIndex = 7;
             this.label3.Text = "Tipo da Conta";
             // 
-            // comboPersonType
+            // cbbPersonType
             // 
-            this.comboPersonType.FormattingEnabled = true;
-            this.comboPersonType.Items.AddRange(new object[] {
+            this.cbbPersonType.FormattingEnabled = true;
+            this.cbbPersonType.Items.AddRange(new object[] {
             "Física",
             "Jurídica"});
-            this.comboPersonType.Location = new System.Drawing.Point(16, 95);
-            this.comboPersonType.Name = "comboPersonType";
-            this.comboPersonType.Size = new System.Drawing.Size(118, 21);
-            this.comboPersonType.TabIndex = 1;
+            this.cbbPersonType.Location = new System.Drawing.Point(16, 95);
+            this.cbbPersonType.Name = "cbbPersonType";
+            this.cbbPersonType.Size = new System.Drawing.Size(118, 21);
+            this.cbbPersonType.TabIndex = 1;
             // 
-            // comboBoxAccountType
+            // cbbAccountType
             // 
-            this.comboBoxAccountType.FormattingEnabled = true;
-            this.comboBoxAccountType.Items.AddRange(new object[] {
+            this.cbbAccountType.FormattingEnabled = true;
+            this.cbbAccountType.Items.AddRange(new object[] {
             "Poupança",
             "Corrente"});
-            this.comboBoxAccountType.Location = new System.Drawing.Point(17, 97);
-            this.comboBoxAccountType.Name = "comboBoxAccountType";
-            this.comboBoxAccountType.Size = new System.Drawing.Size(215, 21);
-            this.comboBoxAccountType.TabIndex = 4;
+            this.cbbAccountType.Location = new System.Drawing.Point(17, 97);
+            this.cbbAccountType.Name = "cbbAccountType";
+            this.cbbAccountType.Size = new System.Drawing.Size(215, 21);
+            this.cbbAccountType.TabIndex = 4;
             // 
             // btnSend
             // 
@@ -184,7 +184,7 @@ namespace Rampup.Atv4.UI
             this.groupBoxAccount_Register.Controls.Add(this.txtAccount);
             this.groupBoxAccount_Register.Controls.Add(this.label3);
             this.groupBoxAccount_Register.Controls.Add(this.labelAccount);
-            this.groupBoxAccount_Register.Controls.Add(this.comboBoxAccountType);
+            this.groupBoxAccount_Register.Controls.Add(this.cbbAccountType);
             this.groupBoxAccount_Register.Controls.Add(this.txtAgency);
             this.groupBoxAccount_Register.Controls.Add(this.label4);
             this.groupBoxAccount_Register.Controls.Add(this.labelAgency);
@@ -230,7 +230,7 @@ namespace Rampup.Atv4.UI
             // groupBoxUser_Register
             // 
             this.groupBoxUser_Register.Controls.Add(this.txtUserName);
-            this.groupBoxUser_Register.Controls.Add(this.comboPersonType);
+            this.groupBoxUser_Register.Controls.Add(this.cbbPersonType);
             this.groupBoxUser_Register.Controls.Add(this.label2);
             this.groupBoxUser_Register.Controls.Add(this.label1);
             this.groupBoxUser_Register.Location = new System.Drawing.Point(30, 25);
@@ -353,12 +353,14 @@ namespace Rampup.Atv4.UI
             // 
             this.listViewAccounts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ownerName,
+            this.account_ID,
+            this.agency,
             this.accountType,
             this.personType,
             this.balance});
-            this.listViewAccounts.Location = new System.Drawing.Point(47, 34);
+            this.listViewAccounts.Location = new System.Drawing.Point(12, 34);
             this.listViewAccounts.Name = "listViewAccounts";
-            this.listViewAccounts.Size = new System.Drawing.Size(426, 466);
+            this.listViewAccounts.Size = new System.Drawing.Size(499, 466);
             this.listViewAccounts.TabIndex = 14;
             this.listViewAccounts.UseCompatibleStateImageBehavior = false;
             this.listViewAccounts.View = System.Windows.Forms.View.Details;
@@ -368,35 +370,35 @@ namespace Rampup.Atv4.UI
             this.ownerName.Text = "Nome";
             this.ownerName.Width = 190;
             // 
+            // account_ID
+            // 
+            this.account_ID.Text = "Conta";
+            this.account_ID.Width = 44;
+            // 
+            // agency
+            // 
+            this.agency.Text = "Agência";
+            this.agency.Width = 55;
+            // 
             // accountType
             // 
             this.accountType.Text = "Tipo da conta";
-            this.accountType.Width = 85;
+            this.accountType.Width = 83;
             // 
             // personType
             // 
-            this.personType.Text = "Tipo de Pessoa";
-            this.personType.Width = 99;
+            this.personType.Text = "Tipo da Pessoa";
+            this.personType.Width = 94;
             // 
             // balance
             // 
             this.balance.Text = "Saldo";
-            this.balance.Width = 46;
-            // 
-            // dataGridAccounts
-            // 
-            this.dataGridAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAccounts.Location = new System.Drawing.Point(47, 34);
-            this.dataGridAccounts.Name = "dataGridAccounts";
-            this.dataGridAccounts.Size = new System.Drawing.Size(444, 466);
-            this.dataGridAccounts.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 535);
-            this.Controls.Add(this.dataGridAccounts);
             this.Controls.Add(this.listViewAccounts);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
@@ -410,7 +412,6 @@ namespace Rampup.Atv4.UI
             this.tabPageOperations.ResumeLayout(false);
             this.groupBox_Operations.ResumeLayout(false);
             this.groupBox_Operations.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAccounts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,8 +422,8 @@ namespace Rampup.Atv4.UI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboPersonType;
-        private System.Windows.Forms.ComboBox comboBoxAccountType;
+        private System.Windows.Forms.ComboBox cbbPersonType;
+        private System.Windows.Forms.ComboBox cbbAccountType;
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.Label label4;
@@ -435,9 +436,6 @@ namespace Rampup.Atv4.UI
         private System.Windows.Forms.TabPage tabPageOperations;
         private System.Windows.Forms.ListView listViewAccounts;
         private System.Windows.Forms.ColumnHeader ownerName;
-        private System.Windows.Forms.ColumnHeader accountType;
-        private System.Windows.Forms.ColumnHeader personType;
-        private System.Windows.Forms.ColumnHeader balance;
         private TextBox txtAccount_Operations;
         private Label label5;
         private TextBox txtAgency_Operations;
@@ -450,6 +448,10 @@ namespace Rampup.Atv4.UI
         private Label labelValue_Operations;
         private TextBox txtValue_Operations;
         private Button btnConfirm_Operations;
-        private DataGridView dataGridAccounts;
+        private ColumnHeader account_ID;
+        private ColumnHeader agency;
+        private ColumnHeader accountType;
+        private ColumnHeader personType;
+        private ColumnHeader balance;
     }
 }
