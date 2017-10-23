@@ -3885,7 +3885,8 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {}
+    "C:\\Users\\lucas.assis\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -3893,14 +3894,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Rampup\\Rampup_Atv02_Constructors\\Rampup.Atv4.Repository\\Rampup.Atv4.Repository.csproj",
+      "projectUniqueName": "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Repository\\Rampup.Atv4.Repository.csproj",
       "projectName": "Rampup.Atv4.Repository",
-      "projectPath": "C:\\Rampup\\Rampup_Atv02_Constructors\\Rampup.Atv4.Repository\\Rampup.Atv4.Repository.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Rampup\\Rampup_Atv02_Constructors\\Rampup.Atv4.Repository\\obj\\",
+      "projectPath": "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Repository\\Rampup.Atv4.Repository.csproj",
+      "packagesPath": "C:\\Users\\lucas.assis\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Repository\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lucas.assis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3913,11 +3917,16 @@
       "frameworks": {
         "netstandard1.4": {
           "projectReferences": {
-            "C:\\Rampup\\Rampup_Atv02_Constructors\\Rampup.Atv4.Model\\Rampup.Atv4.Model.csproj": {
-              "projectPath": "C:\\Rampup\\Rampup_Atv02_Constructors\\Rampup.Atv4.Model\\Rampup.Atv4.Model.csproj"
+            "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Model\\Rampup.Atv4.Model.csproj": {
+              "projectPath": "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Model\\Rampup.Atv4.Model.csproj"
             }
           }
         }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {

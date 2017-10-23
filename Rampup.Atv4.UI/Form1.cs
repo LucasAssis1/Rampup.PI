@@ -15,14 +15,16 @@ namespace Rampup.Atv4.UI
 {
     public partial class Form1 : Form
     {
+        AccountService _service;
         public Form1()
         {
             InitializeComponent();
+            _service = new AccountService();
+            dataGridAccounts.Hide();
         }
-
+        
         //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
         //public List<Account> RegisteredAccounts = new List<Account>();
-        AccountService _service = new AccountService();
         private void btnSend_Click(object sender, EventArgs e)
         {
             string name = txtUserName.Text;
@@ -59,10 +61,16 @@ namespace Rampup.Atv4.UI
             comboBoxAccountType.ResetText();
 
             dataGridAccounts.DataSource = null;
-            dataGridAccounts.DataSource = _service.ListAccounts();
+            dataGridAccounts.DataSource = list;
 
-            var item = new ListViewItem(new[] { c1.Owner.Name.ToString(), c1.Type_Ac.ToString(), c1.Owner.PType.ToString(), c1.Balance.ToString() });
-    
+            listViewAccounts.Items.Clear();
+
+            foreach (var i in list)
+            {
+                var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
+                listViewAccounts.Items.Add(item);
+            }
+
         }
 
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
@@ -88,6 +96,15 @@ namespace Rampup.Atv4.UI
             txtValue_Operations.Clear();
             radioButtonCashOut_Operations.Checked = false;
             radioButtonDeposit_Operations.Checked = false;
+            listViewAccounts.Items.Clear();
+
+
+            List<Account> list = _service.ListAccounts();
+            foreach (var i in list)
+            {
+                var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
+                listViewAccounts.Items.Add(item);
+            }
         }
     }
 }
