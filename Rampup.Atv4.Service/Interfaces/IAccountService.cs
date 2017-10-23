@@ -8,7 +8,7 @@ namespace Rampup.Atv4.Service.Interfaces
     interface IAccountService
     {
         List<Account> ListAccounts();
-        void AddAccount(Account account);
+        bool AddAccount(Account account);
         void UpdateAccount(string agency, string account_ID, double value);
         void DeleteAccount(string agency, string account_ID);
     }

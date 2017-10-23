@@ -14,9 +14,9 @@ namespace Rampup.Atv4.Service
             return accountRepo.ListAccounts();
         }
 
-        public void AddAccount(Account account)
+        public bool AddAccount(Account account)
         {
-            accountRepo.AddAccount(account);
+            return accountRepo.AddAccount(account);
         }
 
         public void UpdateAccount(string agency, string account_ID, double value)

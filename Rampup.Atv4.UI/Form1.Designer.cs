@@ -63,12 +63,14 @@ namespace Rampup.Atv4.UI
             this.accountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.personType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.balance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridAccounts = new System.Windows.Forms.DataGridView();
             this.tabControl.SuspendLayout();
             this.tabPageRegister.SuspendLayout();
             this.groupBoxAccount_Register.SuspendLayout();
             this.groupBoxUser_Register.SuspendLayout();
             this.tabPageOperations.SuspendLayout();
             this.groupBox_Operations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAccounts)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -381,11 +383,20 @@ namespace Rampup.Atv4.UI
             this.balance.Text = "Saldo";
             this.balance.Width = 46;
             // 
+            // dataGridAccounts
+            // 
+            this.dataGridAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAccounts.Location = new System.Drawing.Point(47, 34);
+            this.dataGridAccounts.Name = "dataGridAccounts";
+            this.dataGridAccounts.Size = new System.Drawing.Size(444, 466);
+            this.dataGridAccounts.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(948, 535);
+            this.Controls.Add(this.dataGridAccounts);
             this.Controls.Add(this.listViewAccounts);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
@@ -399,6 +410,7 @@ namespace Rampup.Atv4.UI
             this.tabPageOperations.ResumeLayout(false);
             this.groupBox_Operations.ResumeLayout(false);
             this.groupBox_Operations.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAccounts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -438,5 +450,6 @@ namespace Rampup.Atv4.UI
         private Label labelValue_Operations;
         private TextBox txtValue_Operations;
         private Button btnConfirm_Operations;
+        private DataGridView dataGridAccounts;
     }
 }

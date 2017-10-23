@@ -1,10 +1,10 @@
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.deps.json
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.dll
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.pdb
+C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Model.dll
+C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Model.pdb
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\obj\Debug\netstandard1.4\Rampup.Atv4.Repository.csprojResolveAssemblyReference.cache
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\obj\Debug\netstandard1.4\Rampup.Atv4.Repository.csproj.CoreCompileInputs.cache
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\obj\Debug\netstandard1.4\Rampup.Atv4.Repository.AssemblyInfo.cs
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\obj\Debug\netstandard1.4\Rampup.Atv4.Repository.dll
 C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\obj\Debug\netstandard1.4\Rampup.Atv4.Repository.pdb
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Model.dll
-C:\Rampup\Rampup_Atv02_Constructors\Rampup.Atv4.Repository\bin\Debug\netstandard1.4\Rampup.Atv4.Model.pdb
