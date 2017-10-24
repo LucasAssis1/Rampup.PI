@@ -52,8 +52,8 @@ namespace Rampup.Atv4.UI
             this.groupBox_Operations = new System.Windows.Forms.GroupBox();
             this.labelValue_Operations = new System.Windows.Forms.Label();
             this.txtValue_Operations = new System.Windows.Forms.TextBox();
-            this.radioButtonDeposit_Operations = new System.Windows.Forms.RadioButton();
-            this.radioButtonCashOut_Operations = new System.Windows.Forms.RadioButton();
+            this.rbDeposit_Operations = new System.Windows.Forms.RadioButton();
+            this.rbCashOut_Operations = new System.Windows.Forms.RadioButton();
             this.txtAccount_Operations = new System.Windows.Forms.TextBox();
             this.labelAgency_Operations = new System.Windows.Forms.Label();
             this.txtAgency_Operations = new System.Windows.Forms.TextBox();
@@ -191,7 +191,7 @@ namespace Rampup.Atv4.UI
             this.groupBoxAccount_Register.Location = new System.Drawing.Point(30, 176);
             this.groupBoxAccount_Register.Name = "groupBoxAccount_Register";
             this.groupBoxAccount_Register.Size = new System.Drawing.Size(313, 193);
-            this.groupBoxAccount_Register.TabIndex = 15;
+            this.groupBoxAccount_Register.TabIndex = 2;
             this.groupBoxAccount_Register.TabStop = false;
             this.groupBoxAccount_Register.Text = "Conta";
             // 
@@ -236,7 +236,7 @@ namespace Rampup.Atv4.UI
             this.groupBoxUser_Register.Location = new System.Drawing.Point(30, 25);
             this.groupBoxUser_Register.Name = "groupBoxUser_Register";
             this.groupBoxUser_Register.Size = new System.Drawing.Size(313, 135);
-            this.groupBoxUser_Register.TabIndex = 16;
+            this.groupBoxUser_Register.TabIndex = 0;
             this.groupBoxUser_Register.TabStop = false;
             this.groupBoxUser_Register.Text = "Usuário";
             // 
@@ -266,8 +266,8 @@ namespace Rampup.Atv4.UI
             // 
             this.groupBox_Operations.Controls.Add(this.labelValue_Operations);
             this.groupBox_Operations.Controls.Add(this.txtValue_Operations);
-            this.groupBox_Operations.Controls.Add(this.radioButtonDeposit_Operations);
-            this.groupBox_Operations.Controls.Add(this.radioButtonCashOut_Operations);
+            this.groupBox_Operations.Controls.Add(this.rbDeposit_Operations);
+            this.groupBox_Operations.Controls.Add(this.rbCashOut_Operations);
             this.groupBox_Operations.Controls.Add(this.txtAccount_Operations);
             this.groupBox_Operations.Controls.Add(this.labelAgency_Operations);
             this.groupBox_Operations.Controls.Add(this.txtAgency_Operations);
@@ -295,27 +295,27 @@ namespace Rampup.Atv4.UI
             this.txtValue_Operations.Size = new System.Drawing.Size(108, 20);
             this.txtValue_Operations.TabIndex = 8;
             // 
-            // radioButtonDeposit_Operations
+            // rbDeposit_Operations
             // 
-            this.radioButtonDeposit_Operations.AutoSize = true;
-            this.radioButtonDeposit_Operations.Location = new System.Drawing.Point(84, 139);
-            this.radioButtonDeposit_Operations.Name = "radioButtonDeposit_Operations";
-            this.radioButtonDeposit_Operations.Size = new System.Drawing.Size(70, 17);
-            this.radioButtonDeposit_Operations.TabIndex = 6;
-            this.radioButtonDeposit_Operations.TabStop = true;
-            this.radioButtonDeposit_Operations.Text = "Depositar";
-            this.radioButtonDeposit_Operations.UseVisualStyleBackColor = true;
+            this.rbDeposit_Operations.AutoSize = true;
+            this.rbDeposit_Operations.Location = new System.Drawing.Point(84, 139);
+            this.rbDeposit_Operations.Name = "rbDeposit_Operations";
+            this.rbDeposit_Operations.Size = new System.Drawing.Size(70, 17);
+            this.rbDeposit_Operations.TabIndex = 6;
+            this.rbDeposit_Operations.TabStop = true;
+            this.rbDeposit_Operations.Text = "Depositar";
+            this.rbDeposit_Operations.UseVisualStyleBackColor = true;
             // 
-            // radioButtonCashOut_Operations
+            // rbCashOut_Operations
             // 
-            this.radioButtonCashOut_Operations.AutoSize = true;
-            this.radioButtonCashOut_Operations.Location = new System.Drawing.Point(17, 139);
-            this.radioButtonCashOut_Operations.Name = "radioButtonCashOut_Operations";
-            this.radioButtonCashOut_Operations.Size = new System.Drawing.Size(53, 17);
-            this.radioButtonCashOut_Operations.TabIndex = 5;
-            this.radioButtonCashOut_Operations.TabStop = true;
-            this.radioButtonCashOut_Operations.Text = "Sacar";
-            this.radioButtonCashOut_Operations.UseVisualStyleBackColor = true;
+            this.rbCashOut_Operations.AutoSize = true;
+            this.rbCashOut_Operations.Location = new System.Drawing.Point(17, 139);
+            this.rbCashOut_Operations.Name = "rbCashOut_Operations";
+            this.rbCashOut_Operations.Size = new System.Drawing.Size(53, 17);
+            this.rbCashOut_Operations.TabIndex = 5;
+            this.rbCashOut_Operations.TabStop = true;
+            this.rbCashOut_Operations.Text = "Sacar";
+            this.rbCashOut_Operations.UseVisualStyleBackColor = true;
             // 
             // txtAccount_Operations
             // 
@@ -443,8 +443,8 @@ namespace Rampup.Atv4.UI
         private GroupBox groupBoxUser_Register;
         private GroupBox groupBoxAccount_Register;
         private GroupBox groupBox_Operations;
-        private RadioButton radioButtonDeposit_Operations;
-        private RadioButton radioButtonCashOut_Operations;
+        private RadioButton rbDeposit_Operations;
+        private RadioButton rbCashOut_Operations;
         private Label labelValue_Operations;
         private TextBox txtValue_Operations;
         private Button btnConfirm_Operations;

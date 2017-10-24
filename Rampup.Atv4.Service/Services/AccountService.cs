@@ -15,25 +15,35 @@ namespace Rampup.Atv4.Service
             return accountRepo.ListAccounts();
         }
 
-        public int AddAccount(TextBox name, TextBox pType, TextBox aType, TextBox account_ID, TextBox agency, TextBox balance)
+        public int AddAccount(string name, string pType, string aType, string account_ID, string agency, string balance)
         {
-            if (string.IsNullOrEmpty(balance.Text))
-                return -3;
-            double dBalance = Convert.ToDouble(balance.Text);
-            if (string.IsNullOrEmpty(name.Text) || string.IsNullOrEmpty(pType.Text) || string.IsNullOrEmpty(aType.Text) || string.IsNullOrEmpty(account_ID.Text) || string.IsNullOrEmpty(agency.Text) || string.IsNullOrEmpty(balance.Text))
-                return -1;
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(pType) || string.IsNullOrEmpty(aType) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(balance))
+                return -1;  //one of the required fields is not filled
 
-            if (dBalance.GetType().ToString() != "double")
-                return -2;
+            double dBalance = Convert.ToDouble(balance);
 
-            Account account = new Account(account_ID.Text, agency.Text, aType.Text, new Person(name.Text, pType.Text));
+            Account account = new Account(account_ID, agency, aType, new Person(name, pType));
             account.CalcSaldo(dBalance);
-            return accountRepo.AddAccount(account));
+
+            return accountRepo.AddAccount(account);
         }
 
-        public bool UpdateAccount(string agency, string account_ID, double value)
+        public int UpdateAccount(string agency, string account_ID, string value, bool operation)
         {
-            return accountRepo.UpdateAccount(agency, account_ID, value);
+
+            if (string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(value))
+                return -1;  //user did not filled the required fields
+
+            double dBalance = Convert.ToDouble(value);
+
+            if (operation)
+                dBalance = -dBalance;
+
+            int check = accountRepo.UpdateAccount(agency, account_ID, dBalance);
+
+            if (check == -1)
+                return -2; //could not find the account in the list
+            return 1;
         }
 
         public void DeleteAccount(string agency, string account_ID)

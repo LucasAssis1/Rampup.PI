@@ -20,7 +20,8 @@ namespace Rampup.Atv4.Model
             this.PType = pType;
         }
 
-        ~Person(){
+        ~Person()
+        {
 
         }
     }

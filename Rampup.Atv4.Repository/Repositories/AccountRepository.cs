@@ -15,15 +15,27 @@ namespace Rampup.Atv4.Repository
 
         public int AddAccount(Account account)
         {
-            int accountNumber = accounts.Count;
-            accounts.Add(account);
+            foreach (var item in accounts)
+            {   //checks if it can find the specified account in the list before creating
+                if(account.Agency == item.Agency && account.Account_ID == item.Account_ID)
+                {
+                    //found the account
+                    return -3;
+                }
+            }
+            //int accountNumber = accounts.Count;
 
-            if (accounts.Count > accountNumber)
-                return 1;
-            return -1;
+            accounts.Add(account);
+            return 1;
+            
+            ////checks if the account really was added to the "database" then returns 1
+            //if (accounts.Count > accountNumber)
+            //    return 1;
+            ////if the account was not added to 
+            //return -2;
         }
 
-        public bool UpdateAccount(string agency, string account_ID, double value)
+        public int UpdateAccount(string agency, string account_ID, double value)
         {
 
             foreach (var item in accounts)
@@ -31,10 +43,10 @@ namespace Rampup.Atv4.Repository
                 if (agency == item.Agency && account_ID == item.Account_ID)
                 {
                     item.CalcSaldo(value);
-                    return true;
+                    return 1;
                 }
             }
-            return false;
+            return -1;  //could not find the account in the list
         }
 
         public void DeleteAccount(string agency, string account_ID)

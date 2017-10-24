@@ -35,3 +35,17 @@ C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Ra
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.dll
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Model.pdb
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Repository.pdb
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Windows.Forms.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Drawing.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Security.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Configuration.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Accessibility.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Deployment.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Windows.Forms.xml
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Drawing.xml
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Security.xml
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Configuration.xml
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Accessibility.xml
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Deployment.xml
+C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Runtime.Serialization.Formatters.Soap.xml

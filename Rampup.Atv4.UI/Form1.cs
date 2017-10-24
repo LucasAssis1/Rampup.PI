@@ -28,16 +28,22 @@ namespace Rampup.Atv4.UI
         //public List<Account> RegisteredAccounts = new List<Account>();
         private void btnSend_Click(object sender, EventArgs e)
         {
-            double x = Convert.ToDouble(txtBalance.Text);
             int check = _service.AddAccount(txtUserName.Text, cbbPersonType.Text, cbbAccountType.Text, txtAccount.Text, txtAgency.Text, txtBalance.Text);
-            if (check == -1)
-                MessageBox.Show("Preencha todos os campos");
-            else if (check == -2)
-                MessageBox.Show("Valor com valor inválido. Preencher com valores numéricos");
-            else
+            switch (check)
             {
-                ClearInputs_Register();
-                FillListView();
+                case 1:
+                    ClearInputs_Register();
+                    FillListView();
+                    break;
+                case -1:
+                    MessageBox.Show("Preencha todos os campos");
+                    break;
+                case -2:
+                    MessageBox.Show("Valor com valor inválido. Preencher com valores numéricos");
+                    break;
+                case -3:
+                    MessageBox.Show("Conta " + txtAccount.Text + " na agência " + txtAgency.Text + " já existe");
+                    break;
             }
         }
 
@@ -48,8 +54,6 @@ namespace Rampup.Atv4.UI
             txtAgency.Clear();
             txtAccount.Clear();
             txtBalance.Clear();
-            cbbPersonType.ResetText();
-            cbbAccountType.ResetText();
         }
 
         private void FillListView()
@@ -66,35 +70,22 @@ namespace Rampup.Atv4.UI
 
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
         {
-            string agency = txtAgency_Operations.Text;
-            string account = txtAccount_Operations.Text;
-            double value = Convert.ToDouble(txtValue_Operations.Text);
+            int check = _service.UpdateAccount(txtAgency_Operations.Text, txtAccount_Operations.Text, txtValue_Operations.Text, rbCashOut_Operations.Checked);
 
-            bool check;
+            if (check == -1)
+                MessageBox.Show("Preencha todos os campos");
+            if (check == -2)
+                MessageBox.Show("Conta " + txtAccount_Operations.Text + " na agência " + txtAgency_Operations.Text + " não foi encontrada");
 
-            if (radioButtonCashOut_Operations.Checked)
-                check = _service.UpdateAccount(agency, account, -value);
-            else if (radioButtonDeposit_Operations.Checked)
-               check = _service.UpdateAccount(agency, account, value);
-            
             FillListView();
-            //listViewAccounts.Items.Clear();
-
-            ////string[] showList = new string[]
-            //List<Account> list = _service.ListAccounts();
-            //foreach (var i in list)
-            //{
-            //    var item = new ListViewItem(new[] { i.Owner.Name.ToString(), i.Agency.ToString(), i.Account_ID.ToString(), i.Type_Ac.ToString(), i.Owner.PType.ToString(), i.Balance.ToString() });
-            //    listViewAccounts.Items.Add(item);
-            //}
         }
         private void ClearInputs_Operations()
         {
             txtAgency_Operations.Clear();
             txtAccount_Operations.Clear();
             txtValue_Operations.Clear();
-            radioButtonCashOut_Operations.Checked = false;
-            radioButtonDeposit_Operations.Checked = false;
+            rbCashOut_Operations.Checked = false;
+            rbDeposit_Operations.Checked = false;
         }
     }
 }
