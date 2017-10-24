@@ -3,7 +3,6 @@ using Rampup.Atv4.Repository;
 using Rampup.Atv4.Service.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
 
 namespace Rampup.Atv4.Service
 {
@@ -28,15 +27,15 @@ namespace Rampup.Atv4.Service
             return accountRepo.AddAccount(account);
         }
 
-        public int UpdateAccount(string agency, string account_ID, string value, bool operation)
+        public int UpdateAccount(string agency, string account_ID, string value, bool cashOut, bool deposit)
         {
 
-            if (string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(value) || !cashOut || !deposit)
                 return -1;  //user did not filled the required fields
 
             double dBalance = Convert.ToDouble(value);
 
-            if (operation)
+            if (cashOut)
                 dBalance = -dBalance;
 
             int check = accountRepo.UpdateAccount(agency, account_ID, dBalance);

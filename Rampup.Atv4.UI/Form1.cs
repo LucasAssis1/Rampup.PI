@@ -63,14 +63,14 @@ namespace Rampup.Atv4.UI
             List<Account> list = _service.ListAccounts();
             for(int i = 0; i < list.Count(); i++)
             {
-                var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Account_ID.ToString(),list[i].Agency.ToString() ,list[i].Type_Ac.ToString(), list[i].Owner.PType.ToString(), list[i].Balance.ToString() });
+                var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Owner.PType.ToString(), list[i].Agency.ToString(), list[i].Account_ID.ToString(), list[i].Type_Ac.ToString(), list[i].Balance.ToString() });
                 listViewAccounts.Items.Add(item);
             }
         }
 
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
         {
-            int check = _service.UpdateAccount(txtAgency_Operations.Text, txtAccount_Operations.Text, txtValue_Operations.Text, rbCashOut_Operations.Checked);
+            int check = _service.UpdateAccount(txtAgency_Operations.Text, txtAccount_Operations.Text, txtValue_Operations.Text, rbCashOut_Operations.Checked, rbDeposit_Operations.Checked);
 
             if (check == -1)
                 MessageBox.Show("Preencha todos os campos");

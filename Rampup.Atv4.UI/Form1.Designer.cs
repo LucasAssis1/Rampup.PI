@@ -60,10 +60,10 @@ namespace Rampup.Atv4.UI
             this.label5 = new System.Windows.Forms.Label();
             this.listViewAccounts = new System.Windows.Forms.ListView();
             this.ownerName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.account_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.person_Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.agency = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.accountType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.personType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.account_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.account_Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.balance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.tabPageRegister.SuspendLayout();
@@ -353,10 +353,10 @@ namespace Rampup.Atv4.UI
             // 
             this.listViewAccounts.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ownerName,
-            this.account_ID,
+            this.person_Type,
             this.agency,
-            this.accountType,
-            this.personType,
+            this.account_ID,
+            this.account_Type,
             this.balance});
             this.listViewAccounts.Location = new System.Drawing.Point(12, 34);
             this.listViewAccounts.Name = "listViewAccounts";
@@ -368,27 +368,24 @@ namespace Rampup.Atv4.UI
             // ownerName
             // 
             this.ownerName.Text = "Nome";
-            this.ownerName.Width = 190;
+            this.ownerName.Width = 171;
             // 
-            // account_ID
+            // person_Type
             // 
-            this.account_ID.Text = "Conta";
-            this.account_ID.Width = 44;
+            this.person_Type.Text = "Tipo de Pessoa";
+            this.person_Type.Width = 94;
             // 
             // agency
             // 
             this.agency.Text = "Agência";
-            this.agency.Width = 55;
             // 
-            // accountType
+            // account_ID
             // 
-            this.accountType.Text = "Tipo da conta";
-            this.accountType.Width = 83;
+            this.account_ID.Text = "Conta";
             // 
-            // personType
+            // account_Type
             // 
-            this.personType.Text = "Tipo da Pessoa";
-            this.personType.Width = 94;
+            this.account_Type.Text = "Tipo de Conta";
             // 
             // balance
             // 
@@ -448,10 +445,10 @@ namespace Rampup.Atv4.UI
         private Label labelValue_Operations;
         private TextBox txtValue_Operations;
         private Button btnConfirm_Operations;
-        private ColumnHeader account_ID;
+        private ColumnHeader person_Type;
         private ColumnHeader agency;
-        private ColumnHeader accountType;
-        private ColumnHeader personType;
+        private ColumnHeader account_ID;
+        private ColumnHeader account_Type;
         private ColumnHeader balance;
     }
 }

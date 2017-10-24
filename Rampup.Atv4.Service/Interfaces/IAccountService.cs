@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Windows.Forms;
 
 namespace Rampup.Atv4.Service.Interfaces
 {
@@ -10,7 +9,7 @@ namespace Rampup.Atv4.Service.Interfaces
     {
         List<Account> ListAccounts();
         int AddAccount(string name, string pType, string aType, string account_ID, string agency, string balance);
-        int UpdateAccount(string agency, string account_ID, string value, bool operation);
+        int UpdateAccount(string agency, string account_ID, string value, bool cashOut, bool deposit);
         void DeleteAccount(string agency, string account_ID);
     }
 }
