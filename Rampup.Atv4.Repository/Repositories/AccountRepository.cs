@@ -28,11 +28,6 @@ namespace Rampup.Atv4.Repository
             accounts.Add(account);
             return 1;
             
-            ////checks if the account really was added to the "database" then returns 1
-            //if (accounts.Count > accountNumber)
-            //    return 1;
-            ////if the account was not added to 
-            //return -2;
         }
 
         public int UpdateAccount(string agency, string account_ID, double value)

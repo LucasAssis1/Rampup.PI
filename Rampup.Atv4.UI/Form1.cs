@@ -38,13 +38,11 @@ namespace Rampup.Atv4.UI
                 case -1:
                     MessageBox.Show("Preencha todos os campos");
                     break;
-                case -2:
-                    MessageBox.Show("Valor com valor inválido. Preencher com valores numéricos");
-                    break;
                 case -3:
                     MessageBox.Show("Conta " + txtAccount.Text + " na agência " + txtAgency.Text + " já existe");
                     break;
             }
+
         }
 
         private void ClearInputs_Register()
@@ -61,9 +59,10 @@ namespace Rampup.Atv4.UI
             listViewAccounts.Items.Clear();
 
             List<Account> list = _service.ListAccounts();
-            for(int i = 0; i < list.Count(); i++)
+            int listCount = list.Count();
+            for(int i = 0; i < listCount; i++)
             {
-                var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Owner.PType.ToString(), list[i].Agency.ToString(), list[i].Account_ID.ToString(), list[i].Type_Ac.ToString(), list[i].Balance.ToString() });
+                var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Agency.ToString(), list[i].Account_ID.ToString(), list[i].Type_Ac.ToString(), list[i].Balance.ToString() });
                 listViewAccounts.Items.Add(item);
             }
         }
@@ -74,10 +73,13 @@ namespace Rampup.Atv4.UI
 
             if (check == -1)
                 MessageBox.Show("Preencha todos os campos");
-            if (check == -2)
+            else if (check == -2)
                 MessageBox.Show("Conta " + txtAccount_Operations.Text + " na agência " + txtAgency_Operations.Text + " não foi encontrada");
-
-            FillListView();
+            else
+            {
+                ClearInputs_Operations();
+                FillListView();
+            }
         }
         private void ClearInputs_Operations()
         {
