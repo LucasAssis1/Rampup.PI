@@ -66,8 +66,12 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rampup.Atv4.Commom\Rampup.Atv4.Commom.csproj">
+      <Project>{8cc1b77e-f2e9-4ec3-a8d9-01af28459f92}</Project>
+      <Name>Rampup.Atv4.Commom</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rampup.Atv4.Model\Rampup.Atv4.Model.csproj">
-      <Project>{027deb4e-9593-4618-bdca-4da74eac8590}</Project>
+      <Project>{027DEB4E-9593-4618-BDCA-4DA74EAC8590}</Project>
       <Name>Rampup.Atv4.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Rampup.Atv4.Service\Rampup.Atv4.Service.csproj">

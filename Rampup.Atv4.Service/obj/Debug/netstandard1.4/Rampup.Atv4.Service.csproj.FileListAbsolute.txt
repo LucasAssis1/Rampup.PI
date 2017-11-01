@@ -49,3 +49,5 @@ C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Sy
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Accessibility.xml
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Deployment.xml
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.Service\bin\Debug\netstandard1.4\System.Runtime.Serialization.Formatters.Soap.xml
+C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Commom.dll
+C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.Service\bin\Debug\netstandard1.4\Rampup.Atv4.Commom.pdb

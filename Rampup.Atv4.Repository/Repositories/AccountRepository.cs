@@ -20,7 +20,7 @@ namespace Rampup.Atv4.Repository
                 if(account.Agency == item.Agency && account.Account_ID == item.Account_ID)
                 {
                     //found the account
-                    return -3;
+                    return -2;
                 }
             }
             //int accountNumber = accounts.Count;
@@ -37,7 +37,7 @@ namespace Rampup.Atv4.Repository
             {
                 if (agency == item.Agency && account_ID == item.Account_ID)
                 {
-                    item.CalcSaldo(value);
+                    item.CalcSaldo(balance: value);
                     return 1;
                 }
             }

@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commom\Commom.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\LegalPerson.cs" />
     <Compile Include="Models\Person.cs" />

@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.Model", "Rampup.Atv4.Model\Rampup.Atv4.Model.csproj", "{027DEB4E-9593-4618-BDCA-4DA74EAC8590}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.UI", "Rampup.Atv4.UI\Rampup.Atv4.UI.csproj", "{FB2FD578-8F7B-442F-89C0-99480CB260C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.Service", "Rampup.Atv4.Service\Rampup.Atv4.Service.csproj", "{BA5C1298-1E72-4AC0-8E68-148BCBDD4942}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rampup.Atv4.Service", "Rampup.Atv4.Service\Rampup.Atv4.Service.csproj", "{BA5C1298-1E72-4AC0-8E68-148BCBDD4942}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.Repository", "Rampup.Atv4.Repository\Rampup.Atv4.Repository.csproj", "{2E04BDF8-DC3B-45BF-ABE6-8450C2B6F58D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rampup.Atv4.Repository", "Rampup.Atv4.Repository\Rampup.Atv4.Repository.csproj", "{2E04BDF8-DC3B-45BF-ABE6-8450C2B6F58D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rampup.Atv4.Commom", "Rampup.Atv4.Commom\Rampup.Atv4.Commom.csproj", "{8CC1B77E-F2E9-4EC3-A8D9-01AF28459F92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2E04BDF8-DC3B-45BF-ABE6-8450C2B6F58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E04BDF8-DC3B-45BF-ABE6-8450C2B6F58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E04BDF8-DC3B-45BF-ABE6-8450C2B6F58D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC1B77E-F2E9-4EC3-A8D9-01AF28459F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC1B77E-F2E9-4EC3-A8D9-01AF28459F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC1B77E-F2E9-4EC3-A8D9-01AF28459F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC1B77E-F2E9-4EC3-A8D9-01AF28459F92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

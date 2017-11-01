@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rampup.Atv4.Model
+namespace Rampup.Atv4.Commom
 {
-    public class Commom
+    public class Enums
     {
         public enum AccountType
         {

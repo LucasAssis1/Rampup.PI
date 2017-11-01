@@ -1,4 +1,5 @@
-﻿using Rampup.Atv4.Model;
+﻿using Rampup.Atv4.Commom;
+using Rampup.Atv4.Model;
 using Rampup.Atv4.Repository;
 using Rampup.Atv4.Service.Interfaces;
 using System;
@@ -14,15 +15,17 @@ namespace Rampup.Atv4.Service
             return accountRepo.ListAccounts();
         }
 
-        public int AddAccount(string name, string pType, string aType, string account_ID, string agency, string balance)
+        public int AddAccount(string name, string personType, string accountType, string account_ID, string agency, string balance)
         {
-            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(pType) || string.IsNullOrEmpty(aType) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(balance))
-                return -1;  //one of the required fields is not filled
+
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(personType) || string.IsNullOrEmpty(accountType) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(balance))
+                throw new FieldsNotFilledException();
+                //return -1;  //one of the required fields is not filled
 
             double dBalance = Convert.ToDouble(balance);
 
-            Account account = new Account(account_ID, agency, aType, new Person(name));
-            account.CalcSaldo(dBalance);
+            Account account = new Account(account_id: account_ID, agency: agency, accountType: accountType, owner: new Person(name));
+            account.CalcSaldo(balance: dBalance);
 
             return accountRepo.AddAccount(account);
         }
@@ -31,14 +34,15 @@ namespace Rampup.Atv4.Service
         {
 
             if (string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(value) || cashOut == false && deposit == false)
-                return -1;  //user did not filled the required fields
+                throw new FieldsNotFilledException();
+                //return -1;  //user did not filled the required fields
 
             double dBalance = Convert.ToDouble(value);
 
             if (cashOut)
                 dBalance = -dBalance;
 
-            int check = accountRepo.UpdateAccount(agency, account_ID, dBalance);
+            int check = accountRepo.UpdateAccount(agency: agency, account_ID: account_ID, value: dBalance);
 
             if (check == -1)
                 return -2; //could not find the account in the list
@@ -47,7 +51,7 @@ namespace Rampup.Atv4.Service
 
         public void DeleteAccount(string agency, string account_ID)
         {
-            accountRepo.DeleteAccount(agency, account_ID);
+            accountRepo.DeleteAccount(agency: agency, account_ID: account_ID);
         }
     }
 }

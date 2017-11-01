@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Rampup.Atv4.Model.Commom;
 
 namespace Rampup.Atv4.Model
 {

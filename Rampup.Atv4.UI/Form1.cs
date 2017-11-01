@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Rampup.Atv4.Model.Commom;
+using static Rampup.Atv4.Commom.Enums;
 
 namespace Rampup.Atv4.UI
 {
@@ -28,7 +28,9 @@ namespace Rampup.Atv4.UI
         //public List<Account> RegisteredAccounts = new List<Account>();
         private void btnSend_Click(object sender, EventArgs e)
         {
-            int check = _service.AddAccount(txtUserName.Text, cbbPersonType.Text, cbbAccountType.Text, txtAccount.Text, txtAgency.Text, txtBalance.Text);
+            //passing named parameters to the addAccount method in AccountService
+            int check = _service.AddAccount(name: txtUserName.Text, personType: cbbPersonType.Text, accountType: cbbAccountType.Text, account_ID: txtAccount.Text, agency: txtAgency.Text, balance: txtBalance.Text);
+            StringBuilder message = new StringBuilder();
             switch (check)
             {
                 case 1:
@@ -36,10 +38,12 @@ namespace Rampup.Atv4.UI
                     FillListView();
                     break;
                 case -1:
-                    MessageBox.Show("Preencha todos os campos");
+                    message.Append("Preencha todos os campos");
+                    MessageBox.Show(message.ToString());
                     break;
-                case -3:
-                    MessageBox.Show("Conta " + txtAccount.Text + " na agência " + txtAgency.Text + " já existe");
+                case -2:
+                    message.Append($"Conta {txtAccount.Text } na agência {txtAgency.Text} já existe");
+                    MessageBox.Show(message.ToString());
                     break;
             }
 
@@ -62,7 +66,7 @@ namespace Rampup.Atv4.UI
             int listCount = list.Count();
             for(int i = 0; i < listCount; i++)
             {
-                var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Agency.ToString(), list[i].Account_ID.ToString(), list[i].Type_Ac.ToString(), list[i].Balance.ToString() });
+                var item = new ListViewItem(new[] { list[i].Owner.Name.ToString(), list[i].Agency.ToString(), list[i].Account_ID.ToString(), list[i].AccountType.ToString(), list[i].Balance.ToString() });
                 listViewAccounts.Items.Add(item);
             }
         }
@@ -70,11 +74,17 @@ namespace Rampup.Atv4.UI
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
         {
             int check = _service.UpdateAccount(txtAgency_Operations.Text, txtAccount_Operations.Text, txtValue_Operations.Text, rbCashOut_Operations.Checked, rbDeposit_Operations.Checked);
-
+            StringBuilder message = new StringBuilder();
             if (check == -1)
-                MessageBox.Show("Preencha todos os campos");
+            {
+                message.Append("Preencha todos os campos");
+                MessageBox.Show(message.ToString());
+            }
             else if (check == -2)
-                MessageBox.Show("Conta " + txtAccount_Operations.Text + " na agência " + txtAgency_Operations.Text + " não foi encontrada");
+            {
+                message.Append($"Conta {txtAccount_Operations.Text} na agência {txtAgency_Operations.Text} não foi encontrada");
+                MessageBox.Show(message.ToString());
+            }
             else
             {
                 ClearInputs_Operations();

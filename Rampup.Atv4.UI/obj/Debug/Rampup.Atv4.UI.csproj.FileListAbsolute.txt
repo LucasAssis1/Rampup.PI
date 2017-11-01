@@ -54,3 +54,5 @@ C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Repository
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Model.pdb
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Service.pdb
 C:\Rampup\rampup.atv4.construtor\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Repository.pdb
+C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Commom.dll
+C:\dev\Rampup-PI\Aula-5\Git\Rampup_Atv02_Constructors\Rampup.Atv4.UI\bin\Debug\Rampup.Atv4.Commom.pdb

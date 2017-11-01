@@ -11,6 +11,7 @@
         "dependencies": {
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Rampup.Atv4.Commom": "1.0.0",
           "Rampup.Atv4.Model": "1.0.0",
           "Rampup.Atv4.Repository": "1.0.0"
         },
@@ -592,6 +593,11 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Rampup.Atv4.Commom/1.0.0": {
+        "runtime": {
+          "Rampup.Atv4.Commom.dll": {}
+        }
+      },
       "Rampup.Atv4.Model/1.0.0": {
         "runtime": {
           "Rampup.Atv4.Model.dll": {}
@@ -1076,6 +1082,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Rampup.Atv4.Commom/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Rampup.Atv4.Model/1.0.0": {
       "type": "project",

@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Rampup.Atv4.Commom\Rampup.Atv4.Commom.csproj" />
     <ProjectReference Include="..\Rampup.Atv4.Model\Rampup.Atv4.Model.csproj" />
     <ProjectReference Include="..\Rampup.Atv4.Repository\Rampup.Atv4.Repository.csproj" />
   </ItemGroup>
