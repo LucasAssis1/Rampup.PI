@@ -24,29 +24,19 @@ namespace Rampup.Atv4.UI
             cbbPersonType.DataSource = Enum.GetValues(typeof(PersonType));
         }
 
-        //adicionar uma camada service, com uma classe responsável por gravar os dados, deletar os dados, e atualizar os dados
-        //public List<Account> RegisteredAccounts = new List<Account>();
         private void btnSend_Click(object sender, EventArgs e)
         {
-            //passing named parameters to the addAccount method in AccountService
-            int check = _service.AddAccount(name: txtUserName.Text, personType: cbbPersonType.Text, accountType: cbbAccountType.Text, account_ID: txtAccount.Text, agency: txtAgency.Text, balance: txtBalance.Text);
-            StringBuilder message = new StringBuilder();
-            switch (check)
+            try
             {
-                case 1:
-                    ClearInputs_Register();
-                    FillListView();
-                    break;
-                case -1:
-                    message.Append("Preencha todos os campos");
-                    MessageBox.Show(message.ToString());
-                    break;
-                case -2:
-                    message.Append($"Conta {txtAccount.Text } na agência {txtAgency.Text} já existe");
-                    MessageBox.Show(message.ToString());
-                    break;
+                //passing named parameters to the addAccount method in AccountService
+                _service.AddAccount(name: txtUserName.Text, personType: cbbPersonType.Text, accountType: cbbAccountType.Text, account_ID: txtAccount.Text, agency: txtAgency.Text, balance: txtBalance.Text);
+                ClearInputs_Register();
+                FillListView();
             }
-
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ClearInputs_Register()
@@ -73,22 +63,15 @@ namespace Rampup.Atv4.UI
 
         private void btnConfirm_Operations_Click(object sender, EventArgs e)
         {
-            int check = _service.UpdateAccount(txtAgency_Operations.Text, txtAccount_Operations.Text, txtValue_Operations.Text, rbCashOut_Operations.Checked, rbDeposit_Operations.Checked);
-            StringBuilder message = new StringBuilder();
-            if (check == -1)
+            try
             {
-                message.Append("Preencha todos os campos");
-                MessageBox.Show(message.ToString());
-            }
-            else if (check == -2)
-            {
-                message.Append($"Conta {txtAccount_Operations.Text} na agência {txtAgency_Operations.Text} não foi encontrada");
-                MessageBox.Show(message.ToString());
-            }
-            else
-            {
+                _service.UpdateAccount(txtAgency_Operations.Text, txtAccount_Operations.Text, txtValue_Operations.Text, rbCashOut_Operations.Checked, rbDeposit_Operations.Checked);
                 ClearInputs_Operations();
                 FillListView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void ClearInputs_Operations()

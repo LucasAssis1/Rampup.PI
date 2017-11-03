@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\Enums.cs" />
+    <Compile Include="Exceptions\UnexistingAccountException.cs" />
+    <Compile Include="Exceptions\ExistingAccountException.cs" />
     <Compile Include="Exceptions\FieldsNotFilledException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

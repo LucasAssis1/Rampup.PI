@@ -15,11 +15,11 @@ namespace Rampup.Atv4.Service
             return accountRepo.ListAccounts();
         }
 
-        public int AddAccount(string name, string personType, string accountType, string account_ID, string agency, string balance)
+        public void AddAccount(string name, string personType, string accountType, string account_ID, string agency, string balance)
         {
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(personType) || string.IsNullOrEmpty(accountType) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(balance))
-                throw new FieldsNotFilledException();
+                throw new FieldsNotFilledException("Preencha todos os campos");
                 //return -1;  //one of the required fields is not filled
 
             double dBalance = Convert.ToDouble(balance);
@@ -27,26 +27,21 @@ namespace Rampup.Atv4.Service
             Account account = new Account(account_id: account_ID, agency: agency, accountType: accountType, owner: new Person(name));
             account.CalcSaldo(balance: dBalance);
 
-            return accountRepo.AddAccount(account);
+            accountRepo.AddAccount(account);
         }
 
-        public int UpdateAccount(string agency, string account_ID, string value, bool cashOut, bool deposit)
+        public void UpdateAccount(string agency, string account_ID, string value, bool cashOut, bool deposit)
         {
 
             if (string.IsNullOrEmpty(agency) || string.IsNullOrEmpty(account_ID) || string.IsNullOrEmpty(value) || cashOut == false && deposit == false)
-                throw new FieldsNotFilledException();
-                //return -1;  //user did not filled the required fields
+                throw new FieldsNotFilledException("Preencha todos os campos");
 
             double dBalance = Convert.ToDouble(value);
 
             if (cashOut)
                 dBalance = -dBalance;
 
-            int check = accountRepo.UpdateAccount(agency: agency, account_ID: account_ID, value: dBalance);
-
-            if (check == -1)
-                return -2; //could not find the account in the list
-            return 1;
+            accountRepo.UpdateAccount(agency: agency, account_ID: account_ID, value: dBalance);
         }
 
         public void DeleteAccount(string agency, string account_ID)

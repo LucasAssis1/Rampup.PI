@@ -959,6 +959,7 @@
         "dependencies": {
           "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
           "NETStandard.Library": "1.6.1",
+          "Rampup.Atv4.Commom": "1.0.0",
           "Rampup.Atv4.Model": "1.0.0"
         },
         "compile": {

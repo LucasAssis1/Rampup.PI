@@ -935,6 +935,15 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "Rampup.Atv4.Commom/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Rampup.Atv4.Commom.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rampup.Atv4.Commom.dll": {}
+        }
+      },
       "Rampup.Atv4.Model/1.0.0": {
         "type": "project",
         "compile": {
@@ -3871,6 +3880,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "Rampup.Atv4.Commom/1.0.0": {
+      "type": "project",
+      "path": "../Rampup.Atv4.Commom/Rampup.Atv4.Commom.csproj",
+      "msbuildProject": "../Rampup.Atv4.Commom/Rampup.Atv4.Commom.csproj"
+    },
     "Rampup.Atv4.Model/1.0.0": {
       "type": "project",
       "path": "../Rampup.Atv4.Model/Rampup.Atv4.Model.csproj",
@@ -3881,6 +3895,7 @@
     ".NETStandard,Version=v1.4": [
       "Microsoft.NETCore.Portable.Compatibility >= 1.0.1",
       "NETStandard.Library >= 1.6.1",
+      "Rampup.Atv4.Commom >= 1.0.0",
       "Rampup.Atv4.Model >= 1.0.0"
     ]
   },
@@ -3917,6 +3932,9 @@
       "frameworks": {
         "netstandard1.4": {
           "projectReferences": {
+            "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Commom\\Rampup.Atv4.Commom.csproj": {
+              "projectPath": "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Commom\\Rampup.Atv4.Commom.csproj"
+            },
             "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Model\\Rampup.Atv4.Model.csproj": {
               "projectPath": "C:\\dev\\Rampup-PI\\Aula-5\\Git\\Rampup_Atv02_Constructors\\Rampup.Atv4.Model\\Rampup.Atv4.Model.csproj"
             }
