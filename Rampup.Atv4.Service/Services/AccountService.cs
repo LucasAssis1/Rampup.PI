@@ -43,7 +43,6 @@ namespace Rampup.Atv4.Service
 
             accountRepo.UpdateAccount(agency: agency, account_ID: account_ID, value: dBalance);
         }
-
         public void DeleteAccount(string agency, string account_ID)
         {
             accountRepo.DeleteAccount(agency: agency, account_ID: account_ID);

@@ -24,7 +24,6 @@ namespace Rampup.Atv4.Repository
                     throw new ExistingAccountException($"Conta {account.Account_ID} na agência {account.Agency} já existe");
                 }
             }
-            //int accountNumber = accounts.Count;
 
             accounts.Add(account);
         }

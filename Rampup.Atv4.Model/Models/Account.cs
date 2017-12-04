@@ -16,6 +16,8 @@ namespace Rampup.Atv4.Model
 
         public Double Balance { get; private set; }
 
+        public Double Tax { get; private set; }
+
         public DateTime CreationDate { get; private set ; }
 
         public Account(string account_id, string agency, String accountType, Person owner)
@@ -26,7 +28,7 @@ namespace Rampup.Atv4.Model
             this.Owner = owner;
             this.CreationDate = DateTime.Now;
         }
-        public void CalcSaldo(double balance)
+        public virtual void CalcSaldo(double balance)
         {
             this.Balance += balance;
         }
